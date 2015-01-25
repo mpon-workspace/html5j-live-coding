@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Polymer App</title>
+	<!-- このJSのおかげでWeb Componentsに対応していなくても対応できる -->
+	<script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+	<link rel="import" href="todo-task.html">
+</head>
+<body>
+	<template is="auto-binding" id="t">
+		<template auto-repeat="true">
+			<core-icon-button icon="check"></core-icon-button>
+		</template>
+		<core-icon-button icon="add" on-click="{{add}}">
+	</template>
+	<script charset="utf-8">
+	var t = document.querySelector('#t');
+	t.items = [
+	{
+		done: true,
+		task: 'furst task name here'
+	},
+	{
+		done: false,
+		task: 'second task name here'
+	}
+	];
+	t.deleteTask = function(e. detail, sender) {
+		this.items.splice(sender.index, 1);
+	};
+	</script>
+</body>
+</html>

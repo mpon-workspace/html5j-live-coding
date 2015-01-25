@@ -1,0 +1,16 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/core-icon-button/core-icon-button.html">
+<link rel="import" href="bower_components/core-icons/core-icons.html">
+
+<polymer-element name="todo-task" attributes="">
+	<template>
+		<style>
+		:host {
+			display: block;
+		}
+		</style>
+		<div>
+			<core-icon-button icon="{{item.done?'check':'check-box-outline-blank'}}" on-click="{{toggle}}"></core-icon-button>
+			<input type="text" is="core-"
+		</div>
+	</template>
